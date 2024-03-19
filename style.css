@@ -29,6 +29,8 @@ p{
     flex-direction: column;
     justify-content: center;
     margin: 10% auto;
+    padding-left: 20%;
+    padding-right: 20%;
     max-width: 570px;
 }
 
@@ -37,6 +39,12 @@ p{
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.5;
+}
+
+.btn{
+    color: white;
+    text-align: center;
+    text-decoration: none;
 }
 
 .rules{
