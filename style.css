@@ -69,3 +69,94 @@ p{
 .start:hover{
     background-color: #0090e9;
 }
+
+/* styly pro hra.html */
+
+
+
+.backsheet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.game {
+    max-width: 80vmin;
+    margin: 1rem auto 2rem auto;
+  }
+
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.3rem;
+  }
+
+.menu--left,
+.menu--right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: white;
+  font-size: 30px;
+}
+
+.home {
+    display: inline-block;
+    width: 60px; /* Šířka tlačítka */
+    height: 60px; /* Výška tlačítka */
+    background-color: #1fcca4; /* Barva pozadí tlačítka */
+    padding: 10px; /* Odsazení tlačítka */
+    text-decoration: none; /* Odstranění podtržení u odkazu */
+}
+
+.home:hover {
+    background-color: #1cbb96; /* Barva pozadí tlačítka při najetí myší */
+}
+
+.home:focus {
+    cursor: pointer; /* nefunguje*/
+  }
+
+
+.restart {
+    display: inline-block;
+    width: 60px; /* Šířka tlačítka */
+    height: 60px; /* Výška tlačítka */
+    background-color: #0197f6; /* Barva pozadí tlačítka */
+    padding: 10px; /* Odsazení tlačítka */
+    text-decoration: none; /* Odstranění podtržení u odkazu */
+}
+
+.restart:hover {
+    background-color: #0090e9; /* Barva pozadí tlačítka při najetí myší */
+}
+
+.restart:focus {
+    cursor: pointer; /* nefunguje*/
+  }
+
+
+
+
+main .play__board{
+    display: flex;
+    flex: wrap;
+}
+
+.play__square {
+    width: 10%;
+    aspect-ratio: 1 / 1;
+    opacity: 0.5;
+    border: 1.5px solid #283e50;
+}
+
+
+.play__square:hover,
+.play__square:focus {
+    opacity: 0.45;
+    cursor: pointer;
+  }
