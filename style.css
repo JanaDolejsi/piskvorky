@@ -16,6 +16,9 @@ h1{
     text-align: center;
     font-weight: 400;
     font-style: normal;
+    margin: 0;
+    padding: 15px;
+    font-size: 3rem;
 }
 
 p{
@@ -78,14 +81,14 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .game {
+    display: flex;
+    flex-direction: column;
     max-width: 80vmin;
     margin: 1rem auto 2rem auto;
   }
-
 
 .menu {
     display: flex;
@@ -101,13 +104,13 @@ p{
   gap: 0.5rem;
   font-weight: 500;
   color: white;
-  font-size: 30px;
+  font-size: 30px; 
+  font-style: normal;  
 }
 
 .home {
     display: inline-block;
-    width: 60px; /* Šířka tlačítka */
-    height: 60px; /* Výška tlačítka */
+    height: 1rem;
     background-color: #1fcca4; /* Barva pozadí tlačítka */
     padding: 10px; /* Odsazení tlačítka */
     text-decoration: none; /* Odstranění podtržení u odkazu */
@@ -124,8 +127,7 @@ p{
 
 .restart {
     display: inline-block;
-    width: 60px; /* Šířka tlačítka */
-    height: 60px; /* Výška tlačítka */
+    height: 1rem;
     background-color: #0197f6; /* Barva pozadí tlačítka */
     padding: 10px; /* Odsazení tlačítka */
     text-decoration: none; /* Odstranění podtržení u odkazu */
@@ -142,9 +144,10 @@ p{
 
 
 
-main .play__board{
+.play__board{
     display: flex;
-    flex: wrap;
+    flex-wrap: wrap;
+    border: 1.5px solid #283e50;
 }
 
 .play__square {
