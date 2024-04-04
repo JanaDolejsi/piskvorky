@@ -94,7 +94,8 @@ p{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.4rem;
+    padding: 0%;
   }
 
 .menu--left,
@@ -105,7 +106,8 @@ p{
   font-weight: 500;
   color: white;
   font-size: 30px; 
-  font-style: normal;  
+  font-style: normal;
+  align-self:baseline;
 }
 
 .home {
@@ -114,6 +116,7 @@ p{
     background-color: #1fcca4; /* Barva pozadí tlačítka */
     padding: 10px; /* Odsazení tlačítka */
     text-decoration: none; /* Odstranění podtržení u odkazu */
+    border-radius: 15%;
 }
 
 .home:hover {
@@ -121,7 +124,7 @@ p{
 }
 
 .home:focus {
-    cursor: pointer; /* nefunguje*/
+    cursor: pointer; 
   }
 
 
@@ -131,6 +134,7 @@ p{
     background-color: #0197f6; /* Barva pozadí tlačítka */
     padding: 10px; /* Odsazení tlačítka */
     text-decoration: none; /* Odstranění podtržení u odkazu */
+    border-radius: 15%;
 }
 
 .restart:hover {
@@ -138,7 +142,7 @@ p{
 }
 
 .restart:focus {
-    cursor: pointer; /* nefunguje*/
+    cursor: pointer; 
   }
 
 
@@ -153,13 +157,13 @@ p{
 .play__square {
     width: 10%;
     aspect-ratio: 1 / 1;
-    opacity: 0.5;
+    opacity: 0.6;
     border: 1.5px solid #283e50;
 }
 
 
 .play__square:hover,
 .play__square:focus {
-    opacity: 0.45;
+    opacity: 0.3;
     cursor: pointer;
   }
