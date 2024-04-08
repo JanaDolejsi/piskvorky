@@ -157,13 +157,50 @@ p{
 .play__square {
     width: 10%;
     aspect-ratio: 1 / 1;
-    opacity: 0.6;
+    opacity: 0.5;
     border: 1.5px solid #283e50;
 }
 
 
 .play__square:hover,
 .play__square:focus {
-    opacity: 0.3;
+    opacity: 0.45;
     cursor: pointer;
+    border: 1.5px solid #283e50
   }
+
+
+/* styly pro hra.js */
+
+.board__field--circle{
+    background-image: url(circle.svg);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    filter: invert(100%);
+    animation: enlarge 0.15s;
+}
+
+.board__field--cross{
+    background-image: url(cross.svg);
+    background-position: center;
+    background-size: 70%; 
+    background-repeat: no-repeat;
+    filter: invert(100%);
+    animation: enlarge 0.15s;
+}
+
+.play__square:disabled {
+    opacity: 0.7;
+    cursor: default;
+  }
+
+@keyframes enlarge{
+    0%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
