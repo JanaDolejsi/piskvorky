@@ -146,8 +146,6 @@ p{
   }
 
 
-
-
 .play__board{
     display: flex;
     flex-wrap: wrap;
@@ -161,7 +159,6 @@ p{
     border: 1.5px solid #283e50;
 }
 
-
 .play__square:hover,
 .play__square:focus {
     opacity: 0.45;
@@ -173,31 +170,29 @@ p{
 /* styly pro hra.js */
 
 .board__field--circle{
-    background-image: url(circle.svg);
+    background-image: url(circle-black.svg);
     background-position: center;
     background-size: 70%;
     background-repeat: no-repeat;
-    filter: invert(100%);
     animation: enlarge 0.15s;
 }
 
 .board__field--cross{
-    background-image: url(cross.svg);
+    background-image: url(cross-black.svg);
     background-position: center;
     background-size: 70%; 
     background-repeat: no-repeat;
-    filter: invert(100%);
     animation: enlarge 0.15s;
 }
 
 .play__square:disabled {
-    opacity: 0.7;
-    cursor: default;
+    opacity: 1.5;
+    cursor:default;
   }
 
 @keyframes enlarge{
     0%{
-        transform: scale(0.5);
+        transform: scale(1);
     }
     100%{
         transform: scale(1.5);
