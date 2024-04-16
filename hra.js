@@ -1,3 +1,5 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
+
 let currentPlayer = "circle"
 
 const playerChange = (event) => {
@@ -14,16 +16,11 @@ const playerChange = (event) => {
 };
 
 
-document.querySelector("button:nth-child(1)").addEventListener("click",playerChange);
-document.querySelector("button:nth-child(2)").addEventListener("click",playerChange);
-document.querySelector("button:nth-child(3)").addEventListener("click",playerChange);
-document.querySelector("button:nth-child(4)").addEventListener("click",playerChange);
-document.querySelector("button:nth-child(5)").addEventListener("click",playerChange);
-document.querySelector("button:nth-child(6)").addEventListener("click",playerChange);
-document.querySelector("button:nth-child(7)").addEventListener("click",playerChange);
-document.querySelector("button:nth-child(8)").addEventListener("click",playerChange);
-document.querySelector("button:nth-child(9)").addEventListener("click",playerChange);
-document.querySelector("button:nth-child(10)").addEventListener("click",playerChange);
+const buttons = document.querySelectorAll("button")
+buttons.forEach((event) => {
+    addEventListener("click",playerChange);
+  });
+
 
 document.querySelector(".restart").addEventListener("click",event => {
     const useRestart = confirm("Ukončit hru?");
@@ -31,3 +28,27 @@ document.querySelector(".restart").addEventListener("click",event => {
         event.preventDefault();
     }
 });
+
+const herniPole = [...buttons].map((button) => {
+  if (button.classList.contains("board__field--circle")) {
+    return 'o';
+  } else if (button.classList.contains("board__field--cross")) {
+    return 'x';
+  } else {
+    return '_';
+  }
+});
+
+const vitez = findWinner(herniPole);
+    if (vitez === 'o' || vitez === 'x') {
+      setTimeout(() => {
+        alert(`Vyhrál hráč se symbolem ${vitez} !`);
+        location.reload();
+      }, 80);
+    } else if (vitez === 'tie') {
+      setTimeout(() => {
+        alert('Hra skončila remízou!');
+        location.reload();
+      }, 80);
+    }
+  
