@@ -174,7 +174,7 @@ p{
     background-position: center;
     background-size: 70%;
     background-repeat: no-repeat;
-    animation: enlarge 0.15s;
+    animation: enlarge 0.10s;
 }
 
 .board__field--cross{
@@ -182,7 +182,7 @@ p{
     background-position: center;
     background-size: 70%; 
     background-repeat: no-repeat;
-    animation: enlarge 0.15s;
+    animation: enlarge 0.10s;
 }
 
 .play__square:disabled {
