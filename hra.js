@@ -2,7 +2,7 @@ import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 
 let currentPlayer = "circle"
 
-const playerChange = (event) => {
+const playerChange = async (event) => {
     event.target.disabled = true;
     if (currentPlayer === "circle") {
         event.target.classList.add("board__field--circle");
@@ -40,7 +40,23 @@ const playerChange = (event) => {
     };
    }; 
 
+const response = await fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move',
+   {
+    method:'POST',
+    headers: {'content-type': 'application/json'},
+    body: JSON.stringify({
+      board: herniPole,
+      player: 'x',
+    }),
+  },
+)
 
+const data = await response.json();
+const { x, y } = data.position;
+const novePole = buttons[x + y * 10];
+if (currentPlayer === "cross") {
+  novePole.click();
+}
 
 const buttons = document.querySelectorAll("button")
 buttons.forEach(() => {
